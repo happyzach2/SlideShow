@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sub Elements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Info</th>
+      <th>Element</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sub_elements.each do |sub_element| %>
+      <tr>
+        <td><%= sub_element.info %></td>
+        <td><%= sub_element.element %></td>
+        <td><%= link_to 'Show', sub_element %></td>
+        <td><%= link_to 'Edit', edit_sub_element_path(sub_element) %></td>
+        <td><%= link_to 'Destroy', sub_element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sub Element', new_sub_element_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: slide, local: true) do |form| %>
+  <% if slide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(slide.errors.count, "error") %> prohibited this slide from being saved:</h2>
+
+      <ul>
+      <% slide.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :slide_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :presentation_id %>
+    <%= form.text_field :presentation_id, id: :slide_presentation_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
