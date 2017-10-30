@@ -4,6 +4,7 @@
   <strong>Name:</strong>
   <%= @presentation.name %>
 </p>
+<%= link_to "Add Slide", new_slide_path(presentation_id: @presentation.id) %> | 
 
 <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
 <%= link_to 'Back', presentations_path %>
