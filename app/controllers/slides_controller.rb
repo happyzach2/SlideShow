@@ -15,6 +15,7 @@ class SlidesController < ApplicationController
   # GET /slides/new
   def new
     @slide = Slide.new
+    @presentation  = Presentation.find(params[:presentation_id])
   end
 
   # GET /slides/1/edit

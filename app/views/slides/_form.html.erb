@@ -10,16 +10,16 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= form.label "Presentation: "%> <%= @presentation.name %>
+    <%= form.hidden_field :presentation_id, value: @presentation.id %>
+  </div>
 
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title, id: :slide_title %>
   </div>
 
-  <div class="field">
-    <%= form.label :presentation_id %>
-    <%= form.text_field :presentation_id, id: :slide_presentation_id %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
